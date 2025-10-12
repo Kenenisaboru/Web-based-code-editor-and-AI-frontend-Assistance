@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Code Editor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/dracula.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- 🌙 Theme Toggle -->
+        <button id="theme-toggle">🌙 Dark Mode</button>
+
+        <!-- 🧠 Editors Section -->
+        <div class="editors">
+            <div class="editor">
+                <h3>HTML</h3>
+                <textarea id="html-code" placeholder="Write HTML here..."></textarea>
+            </div>
+            <div class="editor">
+                <h3>CSS</h3>
+                <textarea id="css-code" placeholder="Write CSS here..."></textarea>
+            </div>
+            <div class="editor">
+                <h3>JavaScript</h3>
+                <textarea id="js-code" placeholder="Write JS here..."></textarea>
+            </div>
+        </div>
+
+        <!-- ▶ Buttons -->
+        <div class="buttons">
+            <button id="run-btn">Run ▶</button>
+            <button id="download-btn">💾 Download Code</button>
+            <input type="file" id="file-input" accept=".html,.css,.js">
+            <button id="ai-btn">🤖 Get AI Help</button>
+        </div>
+
+        <!-- 💡 AI Assistant Panel -->
+        <div id="ai-panel">
+            <h3>AI Assistant</h3>
+            <div id="ai-suggestions"></div>
+        </div>
+
+        <!-- 💻 Output Preview -->
+        <iframe id="output"></iframe>
+
+    </div>
+
+    <!-- JS: CodeMirror + Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/javascript/javascript.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
